@@ -1,0 +1,25 @@
+{
+  "name": "image-uploader",
+  "version": "1.0.0",
+  "description": "Image-uploader app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshesm10/Image-uploader.git"
+  },
+  "author": "moshesm10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moshesm10/Image-uploader/issues"
+  },
+  "homepage": "https://github.com/moshesm10/Image-uploader#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}

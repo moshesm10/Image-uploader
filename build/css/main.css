@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url("../fonts/Poppins Regular.eot");
+  src: url("../fonts/Poppins Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Poppins Regular.woff2") format("woff2"), url("../fonts/Poppins Regular.woff") format("woff"), url("../fonts/Poppins Regular.svg#Poppins Regular") format("svg");
+  font-style: normal;
+  font-stretch: normal; }
+
+p {
+  color: #bdbdbd;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.04em; }
+
+h1 {
+  margin-top: 0;
+  color: #4f4f4f;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.07em; }
+
+body {
+  background: #fafafb;
+  font-family: 'Poppins Regular'; }
+
+.block-outter {
+  width: 100%;
+  margin-top: calc(50vh - 235px); }
+
+.block {
+  text-align: center; }
+  .block-inner {
+    animation: visibleOnLoad .3s;
+    animation-timing-function: ease-in-out;
+    margin: 0 auto;
+    padding: 32px 36px;
+    max-width: 400px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.09); }
+  .block__description h1 {
+    margin-bottom: 16px; }
+  .block__description h3 {
+    color: #828282;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: -0.1em;
+    margin-bottom: 30px; }
+  .block__upload-area {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background: #f6f8fb;
+    border: 2px dashed #97BEF4;
+    box-sizing: border-box;
+    border-radius: 12px;
+    z-index: 10; }
+    .block__upload-area.dragover {
+      background: #e4efff;
+      outline-offset: -17px;
+      border: 2px solid #97BEF4;
+      transition: .2s; }
+    .block__upload-area input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      position: absolute;
+      z-index: -10; }
+  .block__main-btn {
+    padding: 8px 16px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #2F80ED;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.03em;
+    cursor: pointer; }
+    .block__main-btn:hover {
+      background: #59a1ff;
+      transition: .2s; }
+
+.loader {
+  animation: visibleOnLoad .3s;
+  animation-timing-function: ease-in-out;
+  display: none;
+  margin-top: calc(50vh - 143px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 36px 43px;
+  max-width: 400px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); }
+  .loader h1 {
+    margin-bottom: 30px; }
+  .loader__wrapper {
+    height: 6px;
+    background: #F2F2F2;
+    border-radius: 8px;
+    overflow: hidden; }
+    .loader__wrapper-runner {
+      height: 100%;
+      width: 100px;
+      background: #2F80ED;
+      border-radius: 8px;
+      position: relative;
+      animation: loader 1.5s infinite;
+      animation-timing-function: ease-in-out; }
+
+.uploaded {
+  animation: visibleOnLoad .3s;
+  animation-timing-function: ease-in-out;
+  text-align: center;
+  margin-top: calc(50vh - 240px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 40px 0;
+  max-width: 400px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.09); }
+  .uploaded__icon {
+    animation: rotate 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 100ms;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 11px; }
+  .uploaded h1 {
+    margin-bottom: 25px; }
+  .uploaded__img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25px;
+    border-radius: 12px; }
+  .uploaded__input-area-input {
+    width: 400px;
+    height: 36px;
+    padding-left: 7px;
+    padding-right: 90px;
+    background: #f6f8fb;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-size: 10px;
+    letter-spacing: -0.035em;
+    color: #4f4f4f;
+    outline: none;
+    text-overflow: ellipsis; }
+  .uploaded__input-area button {
+    position: relative;
+    top: -36px;
+    right: -156px;
+    outline: none; }
+
+@keyframes loader {
+  from {
+    left: -100px; }
+  to {
+    left: 400px; } }
+
+@keyframes visibleOnLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    width: 35px;
+    height: 35px; }
+  70% {
+    transform: rotate(450deg);
+    width: 38px;
+    height: 38px; }
+  90% {
+    transform: rotate(300deg);
+    width: 33px;
+    height: 33px; }
+  to {
+    transform: rotate(360deg);
+    width: 35px;
+    height: 35px; } }

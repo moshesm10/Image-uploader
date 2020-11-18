@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploader</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="block-outter block">
+        <div class="block-inner">
+            <div class="block__description">
+                <h1>Upload your image</h1>
+                <h3>File should be Jpeg, Jpg, Png,...</h3>
+            </div>
+            <form id="upload-container" method="POST" action="../server/server.php">
+                <div class="block__upload-area">
+                    <img src="./img/image.svg" alt="icon">
+                    <p>Drag & Drop your image here</p>
+                    <input type="file" name="file-input" id="file-input" onchange="uploadFile(this.files[0])">
+                </div>
+                <p>Or</p>
+                <label for="file-input" class="block__main-btn">Choose a file</label>
+            </form>
+        </div>
+    </div>
+    <div class="loader">
+        <h1>Uploading...</h1>
+        <div class="loader__wrapper">
+            <div class="loader__wrapper-runner"></div>
+        </div>
+    </div>
+</body>
+
+<script src="./js/main.js"></script>
+</html>
