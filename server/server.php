@@ -1,14 +1,14 @@
 <?php
     // get uploaded image
     $img = $_FILES['image'];
-    $cfile = new CURLFile ($img['tmp_name'],$img['type'],$img['type']['name']);
+    $cfile = new CURLFile ($img['tmp_name'],$img['type'],$img['name']);
 
     // create request
     $url = 'https://api.imgbb.com/1/upload';
     $header = array('Content-Type: multipart/form-data');
     $fields = array(
         'image' => $cfile,
-        'key' => '228016febf92b2eb2a242fb2e50adbc5',
+        'key' => 'API_KEY',
     );
 
     $resource = curl_init();
