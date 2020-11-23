@@ -29,7 +29,9 @@ body {
 .block {
   text-align: center; }
   .block-inner {
+    -webkit-animation: visibleOnLoad .3s;
     animation: visibleOnLoad .3s;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     margin: 0 auto;
     padding: 32px 36px;
@@ -80,7 +82,9 @@ body {
       transition: .2s; }
 
 .loader {
+  -webkit-animation: visibleOnLoad .3s;
   animation: visibleOnLoad .3s;
+  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   display: none;
   margin-top: calc(50vh - 143px);
@@ -104,24 +108,31 @@ body {
       background: #2F80ED;
       border-radius: 8px;
       position: relative;
+      -webkit-animation: loader 1.5s infinite;
       animation: loader 1.5s infinite;
+      -webkit-animation-timing-function: ease-in-out;
       animation-timing-function: ease-in-out; }
 
 .uploaded {
+  -webkit-animation: visibleOnLoad .3s;
   animation: visibleOnLoad .3s;
+  -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   text-align: center;
   margin-top: calc(50vh - 240px);
   margin-left: auto;
   margin-right: auto;
-  padding: 32px 40px 0;
+  padding: 32px 40px 32px;
   max-width: 400px;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.09); }
   .uploaded__icon {
+    -webkit-animation: rotate 1s;
     animation: rotate 1s;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 100ms;
     animation-delay: 100ms;
     width: 35px;
     height: 35px;
@@ -133,25 +144,34 @@ body {
     height: 100%;
     margin-bottom: 25px;
     border-radius: 12px; }
-  .uploaded__input-area-input {
-    width: 400px;
+  .uploaded__input-area {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
     height: 36px;
     padding-left: 7px;
-    padding-right: 90px;
     background: #f6f8fb;
     border: 1px solid #E0E0E0;
     box-sizing: border-box;
-    border-radius: 8px;
-    font-size: 10px;
-    letter-spacing: -0.035em;
-    color: #4f4f4f;
-    outline: none;
-    text-overflow: ellipsis; }
-  .uploaded__input-area button {
-    position: relative;
-    top: -36px;
-    right: -156px;
-    outline: none; }
+    border-radius: 8px; }
+    .uploaded__input-area-input {
+      height: 100%;
+      width: calc(100% - 100px);
+      border: none;
+      background: none;
+      font-size: 10px;
+      letter-spacing: -0.035em;
+      color: #4f4f4f;
+      outline: none;
+      text-overflow: ellipsis; }
+    .uploaded__input-area button {
+      outline: none; }
+
+@-webkit-keyframes loader {
+  from {
+    left: -100px; }
+  to {
+    left: 400px; } }
 
 @keyframes loader {
   from {
@@ -159,11 +179,35 @@ body {
   to {
     left: 400px; } }
 
+@-webkit-keyframes visibleOnLoad {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 @keyframes visibleOnLoad {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    width: 35px;
+    height: 35px; }
+  70% {
+    transform: rotate(450deg);
+    width: 38px;
+    height: 38px; }
+  90% {
+    transform: rotate(300deg);
+    width: 33px;
+    height: 33px; }
+  to {
+    transform: rotate(360deg);
+    width: 35px;
+    height: 35px; } }
 
 @keyframes rotate {
   from {

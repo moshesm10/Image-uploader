@@ -164,7 +164,7 @@ body {
     margin-top: calc(50vh - 240px);
     margin-left: auto;
     margin-right: auto;
-    padding: 32px 40px 0;
+    padding: 32px 40px 32px;
     max-width: 400px;
     border-radius: 12px;
     background: $white;
@@ -189,28 +189,31 @@ body {
         margin-bottom: 25px;
         border-radius: 12px;
     }
+
     &__input-area {
+        display: flex;
+        justify-content: space-between;
+        max-width: 400px;
+        height: 36px;
+        padding-left: 7px;
+        background: $bg-sub;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 8px;
 
         &-input {
-            width: 400px;
-            height: 36px;
-            padding-left: 7px;
-            padding-right: 90px;
-            background: $bg-sub;
-            border: 1px solid #E0E0E0;
-            box-sizing: border-box;
-            border-radius: 8px;
+            height: 100%;
+            width: calc(100% - 100px);
+            border: none;
+            background: none;
             font-size: 10px;
             letter-spacing: -0.035em;
             color: $grey-1;
             outline: none;
             text-overflow: ellipsis;
         }
-
+        
         button {
-            position: relative;
-            top: -36px;
-            right: -156px;
             outline: none;
         }
     }

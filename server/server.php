@@ -8,7 +8,7 @@
     $header = array('Content-Type: multipart/form-data');
     $fields = array(
         'image' => $cfile,
-        'key' => 'API_KEY',
+        'key' => "API_KEY",
     );
 
     $resource = curl_init();
@@ -20,6 +20,6 @@
     $result = curl_exec($resource);
     curl_close($resource);
 
-    // return answer from server
+    // return from server
     echo $result;
 ?>
